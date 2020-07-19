@@ -98,6 +98,7 @@ export default function SignIn () {
             type='submit'
             fullWidth
             className={classes.submit}
+            href='/productItens'
           >
             Entrar
           </Button>

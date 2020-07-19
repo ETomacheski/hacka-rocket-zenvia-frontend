@@ -4,6 +4,7 @@ import { Route, BrowserRouter } from 'react-router-dom'
 import Home from './pages/Home/Home'
 import Login from './pages/Login/index'
 import UserRegister from './pages/UserResister/index'
+import ProductItens from './pages/ProductItem/index'
 
 const Routes = () => {
   return (
@@ -11,6 +12,7 @@ const Routes = () => {
       <Route component={Home} exact path='/' />
       <Route component={Login} exact path='/login' />
       <Route component={UserRegister} exact path='/userRegister' />
+      <Route component={ProductItens} exact path='/productItens' />
     </BrowserRouter>
   )
 }
