@@ -72,8 +72,8 @@ export default function SignUp () {
         data
       })
 
-      alert('Conta criada com sucesso.')
-      history.goBack()
+      alert('Produto cadastrado com sucesso.')
+      history.push('/productItens')
     } catch (error) {
       console.log(error)
       console.log(data)
