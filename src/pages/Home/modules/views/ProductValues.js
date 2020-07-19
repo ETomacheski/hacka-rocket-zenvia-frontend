@@ -1,65 +1,65 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
-import Grid from '@material-ui/core/Grid';
-import Container from '@material-ui/core/Container';
-import Typography from '../components/Typography';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { withStyles } from '@material-ui/core/styles'
+import Grid from '@material-ui/core/Grid'
+import Container from '@material-ui/core/Container'
+import Typography from '../components/Typography'
 
 const styles = (theme) => ({
   root: {
     display: 'flex',
     overflow: 'hidden',
-    backgroundColor: theme.palette.secondary.light,
+    backgroundColor: theme.palette.secondary.light
   },
   container: {
     marginTop: theme.spacing(15),
     marginBottom: theme.spacing(30),
     display: 'flex',
-    position: 'relative',
+    position: 'relative'
   },
   item: {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    padding: theme.spacing(0, 5),
+    padding: theme.spacing(0, 5)
   },
   image: {
-    height: 55,
+    height: 55
   },
   title: {
     marginTop: theme.spacing(5),
-    marginBottom: theme.spacing(5),
+    marginBottom: theme.spacing(5)
   },
   curvyLines: {
     pointerEvents: 'none',
     position: 'absolute',
-    top: -180,
-  },
-});
+    top: -180
+  }
+})
 
-function ProductValues(props) {
-  const { classes } = props;
+function ProductValues (props) {
+  const { classes } = props
 
   return (
     <section className={classes.root}>
       <Container className={classes.container}>
         <img
-          src="/static/themes/onepirate/productCurvyLines.png"
+          src='/static/themes/onepirate/productCurvyLines.png'
           className={classes.curvyLines}
-          alt="curvy lines"
+          alt='curvy lines'
         />
         <Grid container spacing={5}>
           <Grid item xs={12} md={4}>
             <div className={classes.item}>
               <img
                 className={classes.image}
-                src="/static/themes/onepirate/productValues1.svg"
-                alt="suitcase"
+                src='/static/themes/onepirate/productValues1.svg'
+                alt='suitcase'
               />
-              <Typography variant="h6" className={classes.title}>
-                The best luxury hotels
+              <Typography variant='h6' className={classes.title}>
+                Vantagens da dona irene
               </Typography>
-              <Typography variant="h5">
+              <Typography variant='h5'>
                 {
                   'From the latest trendy boutique hotel to the iconic palace with XXL pool'
                 }
@@ -73,13 +73,13 @@ function ProductValues(props) {
             <div className={classes.item}>
               <img
                 className={classes.image}
-                src="/static/themes/onepirate/productValues2.svg"
-                alt="graph"
+                src='/static/themes/onepirate/productValues2.svg'
+                alt='graph'
               />
-              <Typography variant="h6" className={classes.title}>
+              <Typography variant='h6' className={classes.title}>
                 New experiences
               </Typography>
-              <Typography variant="h5">
+              <Typography variant='h5'>
                 {
                   'Privatize a pool, take a Japanese bath or wake up in 900m2 of garden… '
                 }
@@ -91,13 +91,13 @@ function ProductValues(props) {
             <div className={classes.item}>
               <img
                 className={classes.image}
-                src="/static/themes/onepirate/productValues3.svg"
-                alt="clock"
+                src='/static/themes/onepirate/productValues3.svg'
+                alt='clock'
               />
-              <Typography variant="h6" className={classes.title}>
+              <Typography variant='h6' className={classes.title}>
                 Exclusive rates
               </Typography>
-              <Typography variant="h5">
+              <Typography variant='h5'>
                 {'By registering, you will access specially negotiated rates '}
                 {'that you will not find anywhere else.'}
               </Typography>
@@ -106,11 +106,11 @@ function ProductValues(props) {
         </Grid>
       </Container>
     </section>
-  );
+  )
 }
 
 ProductValues.propTypes = {
-  classes: PropTypes.object.isRequired,
-};
+  classes: PropTypes.object.isRequired
+}
 
-export default withStyles(styles)(ProductValues);
+export default withStyles(styles)(ProductValues)
