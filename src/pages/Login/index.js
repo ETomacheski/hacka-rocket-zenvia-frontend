@@ -3,14 +3,12 @@ import Avatar from '@material-ui/core/Avatar'
 import Button from '@material-ui/core/Button'
 import CssBaseline from '@material-ui/core/CssBaseline'
 import TextField from '@material-ui/core/TextField'
-import FormControlLabel from '@material-ui/core/FormControlLabel'
-import Checkbox from '@material-ui/core/Checkbox'
 import Link from '@material-ui/core/Link'
 import Grid from '@material-ui/core/Grid'
-import Box from '@material-ui/core/Box'
 import Typography from '@material-ui/core/Typography'
 import { makeStyles } from '@material-ui/core/styles'
 import Container from '@material-ui/core/Container'
+import clsx from 'clsx'
 
 function Copyright () {
   return (
@@ -34,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
   },
   avatar: {
     margin: theme.spacing(1),
-    backgroundColor: theme.palette.secondary.main
+    backgroundColor: '#E3A43D'
   },
   form: {
     width: '100%', // Fix IE 11 issue.
@@ -44,13 +42,20 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: '#DB87D5',
     margin: theme.spacing(3, 0, 2),
     color: '#fff',
+    fontFamily: 'Nunito',
+    fontSize: '18px',
     '&:hover': {
       backgroundColor: '#c46abc'
 
     }
   },
   notRegistered: {
-    textAlign: 'center'
+    textAlign: 'center',
+    fontFamily: 'Nunito'
+  },
+  fontNunito: {
+    fontFamily: 'Nunito',
+    fontSize: '28px'
   }
 }))
 
@@ -62,7 +67,7 @@ export default function SignIn () {
       <CssBaseline />
       <div className={classes.paper}>
         <Avatar className={classes.avatar} />
-        <Typography component='h1' variant='h5'>
+        <Typography component='h1' variant='h5' className={classes.fontNunito}>
           Entrar
         </Typography>
         <form className={classes.form} noValidate>
