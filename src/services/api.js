@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const api = axios.create({
-  baseURL: 'https://mega-hack-api.herokuapp.com',
+  baseURL: 'https://hacka-rocket-zenvia.herokuapp.com/'
 })
 
 export default api
