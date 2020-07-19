@@ -115,6 +115,7 @@ const useStyles = makeStyles((theme) => ({
 export default function Album () {
   const classes = useStyles()
   const [products, setProducts] = useState([])
+  const history = useHistory()
   async function deleteProducts (id) {
     try {
       await axios({
@@ -122,6 +123,7 @@ export default function Album () {
         url: `https://hacka-rocket-zenvia.herokuapp.com/products/${id}`,
         withCredentials: true
       })
+      history.go('/productItens')
     } catch (error) {
       console.log(error)
     }
