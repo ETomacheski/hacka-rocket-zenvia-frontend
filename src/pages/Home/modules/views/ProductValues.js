@@ -63,7 +63,7 @@ function ProductValues (props) {
             <div className={classes.item}>
 
               <Typography variant='h6' className={classes.title}>
-               Porque ter a dona Irene?
+               Por que ter a dona Irene?
               </Typography>
               <Typography variant='h5'>
                 {
@@ -77,10 +77,10 @@ function ProductValues (props) {
             <div className={classes.item}>
 
               <Typography variant='h6' className={classes.title}>
-                Porque comprar com a dona irene?
+                Por que comprar com a dona irene?
               </Typography>
               <Typography variant='h5'>
-                {' Você consegue executar comprar sem ter que baixar nenhum aplicativo e tem o conforte de estar escolhendo itens de comércios locais'}
+                {'Você consegue executar compras sem baixar nenhum aplicativo e ainda escolhe itens de comércios locais'}
 
               </Typography>
             </div>
