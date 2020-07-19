@@ -15,6 +15,7 @@ import clsx from 'clsx'
 import axios from 'axios'
 import Filled from '@material-ui/icons/Delete'
 import Cookies from 'universal-cookie'
+import { useHistory } from 'react-router-dom'
 import { styles as toolbarStyles } from '../Home/modules/components/Toolbar'
 
 function Copyright () {
@@ -114,7 +115,17 @@ const useStyles = makeStyles((theme) => ({
 export default function Album () {
   const classes = useStyles()
   const [products, setProducts] = useState([])
-
+  async function deleteProducts (id) {
+    try {
+      await axios({
+        method: 'delete',
+        url: `https://hacka-rocket-zenvia.herokuapp.com/products/${id}`,
+        withCredentials: true
+      })
+    } catch (error) {
+      console.log(error)
+    }
+  }
   useEffect(() => {
     async function getProducts () {
       const cookies = new Cookies()
@@ -203,11 +214,7 @@ export default function Album () {
                   </CardContent>
                   <CardActions className={classes.buttonCard}>
 
-                    <Button size='small' className={classes.delete}>
-                      Editar
-                    </Button>
-
-                    <Button size='small' color='primary'>
+                    <Button size='small' color='primary' onClick={() => deleteProducts(product.id)}>
                       <Filled className={classes.delete} />
                     </Button>
 
