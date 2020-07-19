@@ -5,18 +5,15 @@ import Button from '../components/Button'
 import ProductHeroLayout from './ProductHeroLayout'
 import Grid from '@material-ui/core/Grid'
 import clsx from 'clsx'
-
-const backgroundImage =
-  'https://images.unsplash.com/photo-1534854638093-bada1813ca19?auto=format&fit=crop&w=1400&q=80'
+import backgroundImage from '../img/fundo.jpg'
 
 const styles = (theme) => ({
   background: {
     backgroundImage: `url(${backgroundImage})`,
-    backgroundColor: '#7fc7d9', // Average color of the background image.
     backgroundPosition: 'center'
   },
   button: {
-    minWidth: 200,
+    minWidth: 0,
     padding: '10px'
   },
   h5: {
@@ -56,12 +53,12 @@ function ProductHero (props) {
 
       <Grid container spacing={2} justify='center'>
         <Grid item>
-          <Button variant='contained' className={clsx(classes.buttonColor, classes.fontNunito)}>
+          <Button variant='contained' className={clsx(classes.buttonColor, classes.fontNunito, classes.button)}>
                     Escreva seu comercio
           </Button>
         </Grid>
         <Grid item>
-          <Button variant='outlined' className={clsx(classes.buttonColor, classes.fontNunito)}>
+          <Button variant='outlined' className={clsx(classes.buttonColor, classes.fontNunito, classes.button)}>
                     Converse com a vovó
           </Button>
         </Grid>

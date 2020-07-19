@@ -10,10 +10,21 @@ const styles = (theme) => ({
     position: 'relative',
     display: 'flex',
     alignItems: 'center',
-    [theme.breakpoints.up('sm')]: {
-      height: '80vh',
-      minHeight: 500,
+    [theme.breakpoints.up('lg')]: {
+      height: '70vh',
+      minHeight: 400,
       maxHeight: 1300
+
+    },
+    [theme.breakpoints.between('sm', 'md', 'xs')]: {
+      height: '40vh',
+      minHeight: 100,
+      maxHeight: 300
+    },
+    [theme.breakpoints.between('xs')]: {
+      height: '10vh',
+      minHeight: 100,
+      maxHeight: 300
     }
   },
   container: {
@@ -30,7 +41,7 @@ const styles = (theme) => ({
     top: 0,
     bottom: 0,
     backgroundColor: theme.palette.common.black,
-    opacity: 0.5,
+    opacity: 0.1,
     zIndex: -1
   },
   background: {
