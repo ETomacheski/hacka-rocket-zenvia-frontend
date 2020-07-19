@@ -62,6 +62,7 @@ function AppAppBar (props) {
         <Toolbar className={classes.toolbar}>
           <div className={classes.left}>
             <Link
+              item
               variant='h7'
               underline='none'
               color='inherit'
@@ -75,6 +76,7 @@ function AppAppBar (props) {
           </div>
           <div className={classes.right}>
             <Link
+              item xs={8} sm={4}
               color='inherit'
               variant='h7'
               underline='none'
@@ -84,6 +86,7 @@ function AppAppBar (props) {
               {'Entrar'}
             </Link>
             <Link
+              item xs={8} sm={4}
               underline='none'
               variant='h7'
               className={clsx(classes.rightLink, classes.backgroundColor, classes.fontNunito)}
