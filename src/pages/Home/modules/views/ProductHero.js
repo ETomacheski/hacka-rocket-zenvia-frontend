@@ -27,10 +27,12 @@ const styles = (theme) => ({
     marginTop: theme.spacing(2)
   },
   buttonColor: {
+    color: '#fff',
+    borderStyle: 'none',
     backgroundColor: '#DB87D5',
     '&:hover': {
-      background: '#efefef',
-      color: '#000'
+      backgroundColor: '#c46abc'
+
     }
   },
   fontNunito: {
