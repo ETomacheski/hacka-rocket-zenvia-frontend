@@ -15,6 +15,7 @@ import Link from '@material-ui/core/Link'
 import clsx from 'clsx'
 import axios from 'axios'
 import Filled from '@material-ui/icons/Delete'
+import Cookies from 'universal-cookie'
 import { styles as toolbarStyles } from '../Home/modules/components/Toolbar'
 
 function Copyright () {
@@ -119,13 +120,18 @@ export default function Album () {
 
   useEffect(() => {
     async function getProducts () {
+      const cookies = new Cookies()
+
+      const cookiesTes = cookies.getAll()
       try {
         const response = await axios({
           method: 'get',
-          url: 'https://hacka-rocket-zenvia.herokuapp.com/products'
+          url: 'https://hacka-rocket-zenvia.herokuapp.com/user',
+          withCredentials: true
         })
-
-        setProducts(response.data)
+        cookies.set('auth', cookiesTes.token, { path: '/', sameSite: true })
+        cookies.set('userData', cookiesTes.userData, { path: '/', sameSite: true })
+        setProducts(response.data.products)
       } catch (error) {
         console.log(error)
       }
@@ -160,7 +166,7 @@ export default function Album () {
                 variant='h7'
                 underline='none'
                 className={clsx(classes.rightLink, classes.buttonLogin, classes.fontNunito)}
-                href='/login'
+                href='/productRegister'
               >
                 {'Cadastrar Produto'}
               </Link>
