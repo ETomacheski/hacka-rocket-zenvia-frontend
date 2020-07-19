@@ -79,7 +79,7 @@ function AppAppBar (props) {
               variant='h7'
               underline='none'
               className={clsx(classes.rightLink, classes.buttonLogin, classes.fontNunito)}
-              href='/premium-themes/onepirate/sign-in/'
+              href='/login'
             >
               {'Entrar'}
             </Link>

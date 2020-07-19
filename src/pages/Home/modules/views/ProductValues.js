@@ -13,7 +13,7 @@ const styles = (theme) => ({
   },
   container: {
     marginTop: theme.spacing(15),
-    marginBottom: theme.spacing(30),
+    marginBottom: theme.spacing(20),
     display: 'flex',
     position: 'relative'
   },
@@ -28,7 +28,8 @@ const styles = (theme) => ({
   },
   title: {
     marginTop: theme.spacing(5),
-    marginBottom: theme.spacing(5)
+    marginBottom: theme.spacing(5),
+    textAlign: 'center'
   },
   curvyLines: {
     pointerEvents: 'none',
@@ -77,7 +78,7 @@ function ProductValues (props) {
                 alt='graph'
               />
               <Typography variant='h6' className={classes.title}>
-                New experiences
+               Porque ter a dona Irene?
               </Typography>
               <Typography variant='h5'>
                 {
@@ -95,7 +96,7 @@ function ProductValues (props) {
                 alt='clock'
               />
               <Typography variant='h6' className={classes.title}>
-                Exclusive rates
+                Porque comprar com a dona irene?
               </Typography>
               <Typography variant='h5'>
                 {'By registering, you will access specially negotiated rates '}
