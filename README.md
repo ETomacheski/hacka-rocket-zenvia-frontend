@@ -1,68 +1,136 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h1 align=center>
+<img src="./src/img/logo.png" />
+</h1>
 
-## Available Scripts
+<div align="center">
 
-In the project directory, you can run:
+![Node_Badge][node_version_badge] ![Npm_Badge][npm_version_badge] ![React_Badge][web_react_badge] ![React_Native_Badge][mobile_react-native_badge] ![NodeJS_Badge][server_nodejs_badge] [![Javascript](https://badges.frapsoft.com/javascript/code/javascript.png?v=101)](https://github.com/ellerbrock/javascript-badges/)
 
-### `yarn start`
+</div>
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<h3 align="center">
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Projeto desenvolvido na 3ª Megahack da **[Shawee][shawee_site]** utilizando as tecnologias ***Javascript, Node.js, ReactJS, React Native***.
 
-### `yarn test`
+</h3>
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<!-- 
+  ...
+  Local Reservado para o Banner com a montagem da tela
+  do site e do aplicativo mobile.
+  ...
+-->
 
-### `yarn build`
+## **:rocket: Objetivo**
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Somos uma plataforma que tem como objetivo agregar valor ao business do Mercado Livre, atribuindo a plataforma a venda de ingressos para eventos como: teatro, cinema, festas entre outros. Teremos a função de vendas em uma plataforma web, tendo nela dois tipo de usuários: o produtor de eventos e o cliente final. Na visão do cliente ele pode procurar por eventos e comprar os ingressos, já na visão do produtor ele pode criar os eventos e a quantidade de ingressos disponíveis. Para completar a validação do ingresso estamos gerando no aplicativo um QR Code que é lido pelo produtor do evento antes de liberar a entrada no mesmo.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## **:computer: Tecnologias**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### **Website: React + Javascript** 
 
-### `yarn eject`
+  - **React Router Dom**
+  - **React Icons**
+  - **Axios**
+  - **React-Cookie**
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+#### Server NodeJS
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+  - **Express**
+  - **CORS**
+  - **Sequelize**
+  - **Postgres**
+  - **MercadoPago API**
+  
+  #### **Aplicativo: React-Native + Javascript**
+  
+  - **Expo**
+  - **React-Navigation**
+  - **React Icons**
+  - **Axios**
+  - **BarCodeScanner**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+[font_roboto]: https://fonts.google.com/specimen/Roboto
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+[font_ubuntu]: https://fonts.google.com/specimen/Ubuntu
 
-## Learn More
+### **Executando o Projeto**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#### **:computer: Frontend**
+> 1. $cd megahack-frontend
+> 2. $npm install
+> 3. $npm start
+> 4. No seu navegador, acesse localhost:3000
+> 5. Enjoy!
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+<!-- Website Links -->
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+[shawee_site]: https://shawee.io/pt/
 
-### Analyzing the Bundle Size
+<!-- Badges -->
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+[github_issues_badge]: https://img.shields.io/github/issues/x0n4d0/ecoleta?color=green
 
-### Making a Progressive Web App
+[repository_license_badge]: https://img.shields.io/github/license/x0n4d0/ecoleta
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+[node_version_badge]: https://img.shields.io/badge/node-12.17.0-green
 
-### Advanced Configuration
+[npm_version_badge]: https://img.shields.io/badge/npm-6.14.4-red
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+[web_react_badge]: https://img.shields.io/badge/web-react-blue
 
-### Deployment
+[mobile_react-native_badge]: https://img.shields.io/badge/mobile-react%20native-blueviolet
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+[server_nodejs_badge]: https://img.shields.io/badge/server-nodejs-important
 
-### `yarn build` fails to minify
+<!-- Techs -->
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+[react]: https://reactjs.org/
+
+[typescript]: https://www.typescriptlang.org/
+
+[node]: https://nodejs.org/en/
+
+[leaflet]: https://react-leaflet.js.org/en/
+
+[ibge_api]: https://servicodados.ibge.gov.br/api/docs/localidades?versao=1
+
+[ibge_api_ufs]: https://servicodados.ibge.gov.br/api/docs/localidades?versao=1#api-UFs-estadosGet
+
+[ibge_api_municipios]: https://servicodados.ibge.gov.br/api/docs/localidades?versao=1#api-Municipios-estadosUFMunicipiosGet
+
+[vscode]: https://code.visualstudio.com/
+
+[react_native]: http://www.reactnative.com/
+
+[stackedit]: https://stackedit.io
+
+[vscode_sqlite_extension]: https://marketplace.visualstudio.com/items?itemName=alexcvzz.vscode-sqlite
+
+[markdown_emoji]: https://gist.github.com/rxaviers/7360908
+
+[commitlint]: https://github.com/conventional-changelog/commitlint
+
+[express]: https://expressjs.com/
+
+[cors]: https://expressjs.com/en/resources/middleware/cors.html
+
+[knex]: http://knexjs.org/
+
+[sqlite3]: https://github.com/mapbox/node-sqlite3
+
+[tsnode]: https://github.com/TypeStrong/ts-node
+
+[feather_icons]: https://feathericons.com/
+
+[insomnia]: https://insomnia.rest/
+
+[react_leaflet]: https://react-leaflet.js.org/
+
+[react_router_dom]: https://github.com/ReactTraining/react-router/tree/master/packages/react-router-dom
+
+[react_icons]: https://react-icons.github.io/react-icons/
+
+[axios]: https://github.com/axios/axios
+
