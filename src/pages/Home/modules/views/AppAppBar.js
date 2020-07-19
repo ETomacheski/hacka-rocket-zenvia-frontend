@@ -87,7 +87,7 @@ function AppAppBar (props) {
               underline='none'
               variant='h7'
               className={clsx(classes.rightLink, classes.backgroundColor, classes.fontNunito)}
-              href='/premium-themes/onepirate/sign-up/'
+              href='/userRegister'
             >
               {'Escrever-se'}
             </Link>
