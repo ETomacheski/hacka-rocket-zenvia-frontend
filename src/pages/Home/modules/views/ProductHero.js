@@ -55,8 +55,8 @@ function ProductHero (props) {
 
       <Grid container spacing={2} justify='center'>
         <Grid item>
-          <Button variant='contained' className={clsx(classes.buttonColor, classes.fontNunito, classes.button)}>
-                    Escreva seu comercio
+          <Button variant='contained' className={clsx(classes.buttonColor, classes.fontNunito, classes.button)} href='/userRegister'>
+                    Inscreva seu comercio
           </Button>
         </Grid>
         <Grid item>

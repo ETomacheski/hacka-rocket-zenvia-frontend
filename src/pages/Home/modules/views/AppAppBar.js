@@ -92,7 +92,7 @@ function AppAppBar (props) {
               className={clsx(classes.rightLink, classes.backgroundColor, classes.fontNunito)}
               href='/userRegister'
             >
-              {'Escrever-se'}
+              {'Inscreva-se'}
             </Link>
           </div>
         </Toolbar>

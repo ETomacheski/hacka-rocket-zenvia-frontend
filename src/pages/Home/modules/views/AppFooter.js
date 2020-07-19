@@ -1,21 +1,8 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import Grid from '@material-ui/core/Grid'
-import Link from '@material-ui/core/Link'
 import Container from '@material-ui/core/Container'
 import Typography from '../components/Typography'
-
-function Copyright () {
-  return (
-    <>
-      {'© '}
-      <Link color='inherit' href='https://material-ui.com/'>
-        Your Website
-      </Link>{' '}
-      {new Date().getFullYear()}
-    </>
-  )
-}
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -28,7 +15,8 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex'
   },
   iconsWrapper: {
-    height: 120
+    height: 10,
+    alignItems: 'center'
   },
   icons: {
     display: 'flex'
@@ -75,42 +63,10 @@ export default function AppFooter () {
               className={classes.iconsWrapper}
               spacing={2}
             >
-              <Grid item className={classes.icons}>
-                <a href='https://material-ui.com/' className={classes.icon}>
-                  <img
-                    src='/static/themes/onepirate/appFooterFacebook.png'
-                    alt='Facebook'
-                  />
-                </a>
-                <a
-                  href='https://twitter.com/MaterialUI'
-                  className={classes.icon}
-                >
-                  <img
-                    src='/static/themes/onepirate/appFooterTwitter.png'
-                    alt='Twitter'
-                  />
-                </a>
-              </Grid>
-              <Grid item>
-                <Copyright />
-              </Grid>
+              © Your Website 2020
+
             </Grid>
           </Grid>
-          <Grid item xs={6} sm={4} md={2}>
-            <Typography variant='h6' marked='left' gutterBottom>
-              Legal
-            </Typography>
-            <ul className={classes.list}>
-              <li className={classes.listItem}>
-                <Link href='/premium-themes/onepirate/terms/'>Terms</Link>
-              </li>
-              <li className={classes.listItem}>
-                <Link href='/premium-themes/onepirate/privacy/'>Privacy</Link>
-              </li>
-            </ul>
-          </Grid>
-
         </Grid>
       </Container>
     </Typography>

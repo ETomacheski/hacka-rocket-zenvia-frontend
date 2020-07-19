@@ -44,63 +44,44 @@ function ProductValues (props) {
   return (
     <section className={classes.root}>
       <Container className={classes.container}>
-        <img
-          src='/static/themes/onepirate/productCurvyLines.png'
-          className={classes.curvyLines}
-          alt='curvy lines'
-        />
+
         <Grid container spacing={5}>
           <Grid item xs={12} md={4}>
             <div className={classes.item}>
-              <img
-                className={classes.image}
-                src='/static/themes/onepirate/productValues1.svg'
-                alt='suitcase'
-              />
+
               <Typography variant='h6' className={classes.title}>
                 Vantagens da dona irene
               </Typography>
               <Typography variant='h5'>
                 {
-                  'From the latest trendy boutique hotel to the iconic palace with XXL pool'
-                }
-                {
-                  ', go for a mini-vacation just a few subway stops away from your home.'
+                  'ChatBot 24h com baixo custo para alavancar as suas vendas e tornar o seu comércio digital'
                 }
               </Typography>
             </div>
           </Grid>
           <Grid item xs={12} md={4}>
             <div className={classes.item}>
-              <img
-                className={classes.image}
-                src='/static/themes/onepirate/productValues2.svg'
-                alt='graph'
-              />
+
               <Typography variant='h6' className={classes.title}>
                Porque ter a dona Irene?
               </Typography>
               <Typography variant='h5'>
                 {
-                  'Privatize a pool, take a Japanese bath or wake up in 900m2 of garden… '
+                  'Você consegue digitalizar seus itens e leva seu comércio a novos lugares, tudo isso com um custo acessível e com alta confiabilidade'
                 }
-                {'your Sundays will not be alike.'}
+
               </Typography>
             </div>
           </Grid>
           <Grid item xs={12} md={4}>
             <div className={classes.item}>
-              <img
-                className={classes.image}
-                src='/static/themes/onepirate/productValues3.svg'
-                alt='clock'
-              />
+
               <Typography variant='h6' className={classes.title}>
                 Porque comprar com a dona irene?
               </Typography>
               <Typography variant='h5'>
-                {'By registering, you will access specially negotiated rates '}
-                {'that you will not find anywhere else.'}
+                {' Você consegue executar comprar sem ter que baixar nenhum aplicativo e tem o conforte de estar escolhendo itens de comércios locais'}
+
               </Typography>
             </div>
           </Grid>
