@@ -65,7 +65,7 @@ export default function SignUp () {
       console.log(cookiesTes.userData)
       cookies.set('auth', cookiesTes.token, { path: '/', sameSite: true })
       cookies.set('userData', cookiesTes.userData, { path: '/', sameSite: true })
-      const response = await axios({
+      await axios({
         method: 'post',
         url: 'https://hacka-rocket-zenvia.herokuapp.com/products',
         withCredentials: true,

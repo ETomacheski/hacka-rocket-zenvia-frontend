@@ -59,7 +59,7 @@ export default function SignUp () {
       business_category: category
     }
     try {
-      const response = await axios({
+      await axios({
         method: 'post',
         url: 'https://hacka-rocket-zenvia.herokuapp.com/users',
         data
