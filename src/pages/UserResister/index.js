@@ -1,29 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Avatar from '@material-ui/core/Avatar'
 import Button from '@material-ui/core/Button'
 import CssBaseline from '@material-ui/core/CssBaseline'
 import TextField from '@material-ui/core/TextField'
-import FormControlLabel from '@material-ui/core/FormControlLabel'
-import Checkbox from '@material-ui/core/Checkbox'
-import Link from '@material-ui/core/Link'
-import Grid from '@material-ui/core/Grid'
-import Box from '@material-ui/core/Box'
 import Typography from '@material-ui/core/Typography'
 import { makeStyles } from '@material-ui/core/styles'
 import Container from '@material-ui/core/Container'
-
-function Copyright () {
-  return (
-    <Typography variant='body2' color='textSecondary' align='center'>
-      {'Copyright © '}
-      <Link color='inherit' href='https://material-ui.com/'>
-        Your Website
-      </Link>{' '}
-      {new Date().getFullYear()}
-      {'.'}
-    </Typography>
-  )
-}
+import Grid from '@material-ui/core/Grid'
+import axios from 'axios'
+import { useHistory } from 'react-router-dom'
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -56,7 +41,36 @@ const useStyles = makeStyles((theme) => ({
 
 export default function SignUp () {
   const classes = useStyles()
+  const history = useHistory()
 
+  const [password, setPassword] = useState('')
+  const [email, setEmail] = useState('')
+  const [name, setName] = useState('')
+  const [city, setCity] = useState('')
+  const [category, setCategory] = useState('')
+
+  async function handleCreateCompanyAccount (event) {
+    event.preventDefault()
+    const data = {
+      name,
+      email,
+      password,
+      location: city,
+      business_category: category
+    }
+    try {
+      const response = await axios({
+        method: 'post',
+        url: 'https://hacka-rocket-zenvia.herokuapp.com/users',
+        data
+      })
+      alert('Conta criada com sucesso.')
+      history.push('/login')
+    } catch (error) {
+      console.log(error)
+      console.log(data)
+    }
+  }
   return (
     <Container component='main' maxWidth='xs'>
       <CssBaseline />
@@ -65,9 +79,10 @@ export default function SignUp () {
         <Typography component='h1' variant='h5'>
           Inscrever-se
         </Typography>
-        <form className={classes.form} noValidate>
+        <form className={classes.form} onSubmit={handleCreateCompanyAccount}>
           <Grid container spacing={2}>
             <Grid item xs={12}>
+
               <TextField
                 autoComplete='fname'
                 name='name'
@@ -77,41 +92,52 @@ export default function SignUp () {
                 id='name'
                 label='Nome'
                 autoFocus
+                value={name}
+                onChange={event => setName(event.target.value)}
               />
             </Grid>
 
             <Grid item xs={12}>
               <TextField
+                autoComplete='fname'
+                name='email'
                 variant='outlined'
                 required
                 fullWidth
                 id='email'
                 label='Email'
-                name='email'
-                autoComplete='email'
+                value={email}
+                onChange={event => setEmail(event.target.value)}
               />
+
             </Grid>
             <Grid item xs={12} sm={6}>
               <TextField
+                autoComplete='fname'
+                name='city'
                 variant='outlined'
                 required
                 fullWidth
-                id='location'
+                id='city'
                 label='Cidade'
-                name='location'
-                autoComplete='location'
+                value={city}
+                onChange={event => setCity(event.target.value)}
               />
+
             </Grid>
             <Grid item xs={12} sm={6}>
               <TextField
+                autoComplete='fname'
+                name='category'
                 variant='outlined'
                 required
                 fullWidth
-                id='business_category'
+                id='category'
                 label='Categoria'
-                name='business_category'
-                autoComplete='business_category'
+                value={category}
+                onChange={event => setCategory(event.target.value)}
               />
+
             </Grid>
             <Grid item xs={12}>
               <TextField
@@ -123,7 +149,10 @@ export default function SignUp () {
                 type='password'
                 id='password'
                 autoComplete='password'
+                value={password}
+                onChange={event => setPassword(event.target.value)}
               />
+
             </Grid>
 
           </Grid>
