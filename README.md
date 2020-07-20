@@ -21,7 +21,8 @@ Projeto desenvolvido na Hackathon da zenvia organizada pela  **[Shawee][shawee_s
 
 ## **:rocket: Objetivo**
 
-Somos uma plataforma que tem como objetivo agregar valor ao business do Mercado Livre, atribuindo a plataforma a venda de ingressos para eventos como: teatro, cinema, festas entre outros. Teremos a função de vendas em uma plataforma web, tendo nela dois tipo de usuários: o produtor de eventos e o cliente final. Na visão do cliente ele pode procurar por eventos e comprar os ingressos, já na visão do produtor ele pode criar os eventos e a quantidade de ingressos disponíveis. Para completar a validação do ingresso estamos gerando no aplicativo um QR Code que é lido pelo produtor do evento antes de liberar a entrada no mesmo.
+A vovó Irene tem 76 anos e é uma senhora super antenada; com a pandemia do COVID-19 ela percebeu que junto dos seus netos ela poderia ajudar na manutenção da saúde financeira de vários pequenos e médios negócios.
+O Dona Irene Ajuda é um ecossistema voltado para os comerciantes que não tem o aporte financeiro necessário para criar os seus próprios ambientes virtuais e estão passando dificuldades para se adaptar ao momento em que estamos vivendo. Nele, é possível comprar e vender de uma maneira fácil e eficiente, com baixo custo para o comerciante e segurança para o comprador. O serviço traz uma plataforma na web onde os produtos podem ser cadastrados pelos vendedores, e um chatbot que atende o cliente diretamente do Whatsapp, recolhendo o pedido e enviando-o ao comércio.
 
 ## **:computer: Tecnologias**
 
