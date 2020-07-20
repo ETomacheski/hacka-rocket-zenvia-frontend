@@ -60,7 +60,13 @@ function ProductHero (props) {
           </Button>
         </Grid>
         <Grid item>
-          <Button variant='outlined' className={clsx(classes.buttonColor, classes.fontNunito, classes.button)}>
+          <Button
+            variant='outlined' className={clsx(classes.buttonColor, classes.fontNunito, classes.button)} onClick={() => {
+              var link = 'http://api.whatsapp.com/send?1=pt_BR&phone=551148377404&text=youthful-hydrogen'
+
+              return window.open(link, '_blank')
+            }}
+          >
                     Converse com a vovó
           </Button>
         </Grid>
