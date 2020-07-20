@@ -1,6 +1,4 @@
-<h1 align=center>
-<img src="./src/img/logo.png" />
-</h1>
+
 
 <div align="center">
 
@@ -10,7 +8,7 @@
 
 <h3 align="center">
 
-Projeto desenvolvido na 3ª Megahack da **[Shawee][shawee_site]** utilizando as tecnologias ***Javascript, Node.js, ReactJS, React Native***.
+Projeto desenvolvido na Hackathon da zenvia organizada pela  **[Shawee][shawee_site]** utilizando as tecnologias ***Javascript, Node.js, ReactJS, React Native***.
 
 </h3>
 
@@ -40,15 +38,8 @@ Somos uma plataforma que tem como objetivo agregar valor ao business do Mercado 
   - **CORS**
   - **Sequelize**
   - **Postgres**
-  - **MercadoPago API**
-  
-  #### **Aplicativo: React-Native + Javascript**
-  
-  - **Expo**
-  - **React-Navigation**
-  - **React Icons**
-  - **Axios**
-  - **BarCodeScanner**
+
+
 
 [font_roboto]: https://fonts.google.com/specimen/Roboto
 
@@ -57,7 +48,6 @@ Somos uma plataforma que tem como objetivo agregar valor ao business do Mercado 
 ### **Executando o Projeto**
 
 #### **:computer: Frontend**
-> 1. $cd megahack-frontend
 > 2. $npm install
 > 3. $npm start
 > 4. No seu navegador, acesse localhost:3000
