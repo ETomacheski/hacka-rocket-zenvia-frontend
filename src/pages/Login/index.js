@@ -6,46 +6,12 @@ import TextField from '@material-ui/core/TextField'
 import Link from '@material-ui/core/Link'
 import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
-import { makeStyles } from '@material-ui/core/styles'
 import Container from '@material-ui/core/Container'
 import Cookies from 'universal-cookie'
 import axios from 'axios'
 import { useHistory } from 'react-router-dom'
-const useStyles = makeStyles((theme) => ({
-  paper: {
-    marginTop: theme.spacing(8),
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center'
-  },
-  avatar: {
-    margin: theme.spacing(1),
-    backgroundColor: '#E3A43D'
-  },
-  form: {
-    width: '100%', // Fix IE 11 issue.
-    marginTop: theme.spacing(1)
-  },
-  submit: {
-    backgroundColor: '#DB87D5',
-    margin: theme.spacing(3, 0, 2),
-    color: '#fff',
-    fontFamily: 'Nunito',
-    fontSize: '18px',
-    '&:hover': {
-      backgroundColor: '#c46abc'
-
-    }
-  },
-  notRegistered: {
-    textAlign: 'center',
-    fontFamily: 'Nunito'
-  },
-  fontNunito: {
-    fontFamily: 'Nunito',
-    fontSize: '28px'
-  }
-}))
+import useStyles from './css.js'
+import clsx from 'clsx'
 
 export default function SignIn () {
   const classes = useStyles()
@@ -62,12 +28,12 @@ export default function SignIn () {
     }
     try {
       axios.defaults.withCredentials = true
+
       const response = await axios({
         method: 'post',
         url: 'https://hacka-rocket-zenvia.herokuapp.com/signIn',
         data
       })
-      console.log(response)
       const cookies = new Cookies()
 
       cookies.set('auth', response.data.token, { path: '/', sameSite: true })
@@ -83,7 +49,7 @@ export default function SignIn () {
       <CssBaseline />
       <div className={classes.paper}>
         <Avatar className={classes.avatar} />
-        <Typography component='h1' variant='h5' className={classes.fontNunito}>
+        <Typography component='h1' className={clsx(classes.fontShrikhand, classes.title)}>
           Entrar
         </Typography>
         <form className={classes.form} onSubmit={handleLogin}>
@@ -98,6 +64,7 @@ export default function SignIn () {
             autoComplete='email'
             autoFocus
             value={email}
+            className={classes.fontNunito}
             onChange={event => setEmail(event.target.value)}
           />
           <TextField
@@ -111,13 +78,14 @@ export default function SignIn () {
             id='password'
             autoComplete='current-password'
             value={password}
+            className={classes.fontNunito}
             onChange={event => setPassword(event.target.value)}
           />
 
           <Button
             type='submit'
             fullWidth
-            className={classes.submit}
+            className={clsx(classes.submit)}
 
           >
             Entrar
@@ -125,7 +93,7 @@ export default function SignIn () {
           <Grid container>
 
             <Grid item>
-              <Link href='/register' variant='body2' className={classes.notRegistered}>
+              <Link href='/register' className={classes.notRegistered}>
                 {'Não possui cadastro?'}
               </Link>
             </Grid>
