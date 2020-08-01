@@ -8,14 +8,12 @@ import Typography from '../components/Typography'
 const styles = (theme) => ({
   root: {
     display: 'flex',
-    overflow: 'hidden',
     backgroundColor: theme.palette.secondary.light
   },
   container: {
     marginTop: theme.spacing(15),
     marginBottom: theme.spacing(20),
-    display: 'flex',
-    position: 'relative'
+    display: 'flex'
   },
   item: {
     display: 'flex',
