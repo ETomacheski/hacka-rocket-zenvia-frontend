@@ -25,8 +25,8 @@ const styles = (theme) => ({
     height: 55
   },
   title: {
-    marginTop: theme.spacing(5),
-    marginBottom: theme.spacing(5),
+    marginTop: theme.spacing(1),
+    marginBottom: theme.spacing(3),
     textAlign: 'center',
     fontSize: 24,
     fontWeight: 'bold',
