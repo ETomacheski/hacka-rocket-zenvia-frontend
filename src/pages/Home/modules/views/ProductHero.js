@@ -16,6 +16,15 @@ const styles = (theme) => ({
   button: {
     minWidth: 0,
     padding: '10px',
+    fontSize: 18,
+    [theme.breakpoints.down('sm')]: {
+      fontSize: 14,
+      backgroundColor: '#DB87D5',
+      '&:hover': {
+        backgroundColor: '#c46abc'
+
+      }
+    },
     [theme.breakpoints.down('xs')]: {
       position: 'fixed',
       left: 0,
@@ -37,6 +46,15 @@ const styles = (theme) => ({
   button2: {
     minWidth: 0,
     padding: '10px',
+    fontSize: 18,
+    [theme.breakpoints.down('sm')]: {
+      fontSize: 14,
+      backgroundColor: '#DB87D5',
+      '&:hover': {
+        backgroundColor: '#c46abc'
+
+      }
+    },
     [theme.breakpoints.down('xs')]: {
       position: 'fixed',
       right: 0,
@@ -46,6 +64,7 @@ const styles = (theme) => ({
       display: 'inline-block',
       boxSizing: 'border-box',
       width: '50%',
+      fontSize: 14,
       backgroundColor: '#DB87D5',
       '&:hover': {
         backgroundColor: '#c46abc'

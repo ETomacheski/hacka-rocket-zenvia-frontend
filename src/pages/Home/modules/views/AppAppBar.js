@@ -10,48 +10,59 @@ const styles = (theme) => ({
   title: {
     fontSize: 36,
     fontFamily: 'shrikhand',
+    [theme.breakpoints.down('sm')]: {
+      fontSize: 24
+    },
     [theme.breakpoints.down('xs')]: {
       fontSize: 18
     }
   },
+
   placeholder: toolbarStyles(theme).root,
+
   toolbar: {
     backgroundColor: '#DB87D5',
     justifyContent: 'space-between'
   },
+
   left: {
     flex: 1
   },
+
   leftLinkActive: {
     color: theme.palette.common.white
   },
+
   right: {
     flex: 1,
     display: 'flex',
     justifyContent: 'flex-end'
   },
+
   rightLink: {
     fontSize: 20,
     color: theme.palette.common.white,
 
     marginLeft: theme.spacing(3)
   },
+
   linkSecondary: {
     color: theme.palette.secondary.main
   },
+
   backgroundColor: {
     backgroundColor: '#7EBEC0',
     padding: '6px',
     fontSize: 24,
     [theme.breakpoints.down('xs')]: {
-      fontSize: 14
+      fontSize: 11
     }
   },
   buttonLogin: {
     marginTop: '6px',
     fontSize: 24,
     [theme.breakpoints.down('xs')]: {
-      fontSize: 14
+      fontSize: 11
     }
 
   },

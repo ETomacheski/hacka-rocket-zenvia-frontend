@@ -27,7 +27,15 @@ const styles = (theme) => ({
   title: {
     marginTop: theme.spacing(5),
     marginBottom: theme.spacing(5),
-    textAlign: 'center'
+    textAlign: 'center',
+    fontSize: 24,
+    fontWeight: 'bold',
+    fontFamily: 'Nunito'
+  },
+  text: {
+    fontSize: 18,
+    lineHeight: 1.5,
+    fontFamily: 'Nunito'
   },
   curvyLines: {
     pointerEvents: 'none',
@@ -47,10 +55,10 @@ function ProductValues (props) {
           <Grid item xs={12} md={4}>
             <div className={classes.item}>
 
-              <Typography variant='h6' className={classes.title}>
+              <Typography className={classes.title}>
                 Vantagens da dona irene
               </Typography>
-              <Typography variant='h5'>
+              <Typography className={classes.text}>
                 {
                   'ChatBot 24h com baixo custo para alavancar as suas vendas e tornar o seu comércio digital'
                 }
@@ -60,10 +68,10 @@ function ProductValues (props) {
           <Grid item xs={12} md={4}>
             <div className={classes.item}>
 
-              <Typography variant='h6' className={classes.title}>
+              <Typography className={classes.title}>
                Por que ter a dona Irene?
               </Typography>
-              <Typography variant='h5'>
+              <Typography className={classes.text}>
                 {
                   'Você consegue digitalizar seus itens e leva seu comércio a novos lugares, tudo isso com um custo acessível e com alta confiabilidade'
                 }
@@ -74,10 +82,10 @@ function ProductValues (props) {
           <Grid item xs={12} md={4}>
             <div className={classes.item}>
 
-              <Typography variant='h6' className={classes.title}>
+              <Typography className={classes.title}>
                 Por que comprar com a dona irene?
               </Typography>
-              <Typography variant='h5'>
+              <Typography className={classes.text}>
                 {'Você consegue executar compras sem baixar nenhum aplicativo e ainda escolhe itens de comércios locais'}
 
               </Typography>
