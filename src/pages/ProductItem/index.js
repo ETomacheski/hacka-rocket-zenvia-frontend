@@ -8,7 +8,6 @@ import CssBaseline from '@material-ui/core/CssBaseline'
 import Grid from '@material-ui/core/Grid'
 import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
-import { makeStyles } from '@material-ui/core/styles'
 import Container from '@material-ui/core/Container'
 import Link from '@material-ui/core/Link'
 import clsx from 'clsx'
@@ -16,7 +15,7 @@ import axios from 'axios'
 import Filled from '@material-ui/icons/Delete'
 import Cookies from 'universal-cookie'
 import { useHistory } from 'react-router-dom'
-import { styles as toolbarStyles } from '../Home/modules/components/Toolbar'
+import useStyles from './css.js'
 
 function Copyright () {
   return (
@@ -30,87 +29,6 @@ function Copyright () {
     </Typography>
   )
 }
-
-const useStyles = makeStyles((theme) => ({
-  icon: {
-    marginRight: theme.spacing(2)
-  },
-  heroContent: {
-    backgroundColor: theme.palette.background.paper,
-    padding: theme.spacing(8, 0, 6)
-  },
-  heroButtons: {
-    marginTop: theme.spacing(4)
-  },
-  cardGrid: {
-    paddingTop: theme.spacing(8),
-    paddingBottom: theme.spacing(8)
-  },
-  card: {
-    height: '100%',
-    display: 'flex',
-    flexDirection: 'column'
-  },
-  cardMedia: {
-    paddingTop: '56.25%' // 16:9
-  },
-  cardContent: {
-    flexGrow: 1
-  },
-  footer: {
-    backgroundColor: theme.palette.background.paper,
-    padding: theme.spacing(6)
-  },
-  title: {
-    fontSize: 28,
-    fontFamily: 'shrikhand'
-  },
-  placeholder: toolbarStyles(theme).root,
-  toolbar: {
-    backgroundColor: '#DB87D5',
-    justifyContent: 'space-between'
-  },
-  left: {
-    flex: 1
-  },
-  leftLinkActive: {
-    color: theme.palette.common.white
-  },
-  right: {
-    flex: 1,
-    display: 'flex',
-    justifyContent: 'flex-end'
-  },
-  rightLink: {
-    fontSize: 20,
-    color: theme.palette.common.white,
-
-    marginLeft: theme.spacing(3)
-  },
-  linkSecondary: {
-    color: theme.palette.secondary.main
-  },
-  backgroundColor: {
-    backgroundColor: '#7EBEC0',
-    padding: '6px'
-  },
-  buttonLogin: {
-    marginTop: '6px'
-
-  },
-  fontShrikhand: {
-    fontFamily: 'Shrikhand'
-  },
-  fontNunito: {
-    fontFamily: 'Nunito'
-  },
-  delete: {
-    color: '#7EBEC0'
-  },
-  buttonCard: {
-    textAlign: 'left'
-  }
-}))
 
 export default function Album () {
   const classes = useStyles()
@@ -197,20 +115,19 @@ export default function Album () {
       <main>
 
         <Container className={classes.cardGrid} maxWidth='md'>
-          {/* End hero unit */}
           <Grid container spacing={4}>
             {products.map((product) => (
               <Grid item key={product} xs={12} sm={6} md={4}>
                 <Card className={classes.card}>
 
                   <CardContent className={classes.cardContent}>
-                    <Typography gutterBottom variant='h5' component='h2'>
+                    <Typography gutterBottom variant='h5' component='h2' className={classes.titleCard}>
                       {product.name}
                     </Typography>
-                    <Typography>
+                    <Typography className={classes.fontNunito}>
                       {product.category}
                     </Typography>
-                    <Typography>
+                    <Typography className={classes.fontNunito}>
                       {product.price}
                     </Typography>
                   </CardContent>
@@ -229,10 +146,10 @@ export default function Album () {
       </main>
       {/* Footer */}
       <footer className={classes.footer}>
-        <Typography variant='h6' align='center' gutterBottom>
+        <Typography variant='h6' align='center' gutterBottom className={classes.fontNunito}>
           Footer
         </Typography>
-        <Typography variant='subtitle1' align='center' color='textSecondary' component='p'>
+        <Typography variant='subtitle1' align='center' color='textSecondary' component='p' className={classes.fontNunito}>
           Something here to give the footer a purpose!
         </Typography>
         <Copyright />
