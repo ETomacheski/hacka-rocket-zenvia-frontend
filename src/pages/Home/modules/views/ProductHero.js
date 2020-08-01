@@ -26,6 +26,7 @@ const styles = (theme) => ({
       display: 'inline-block',
       boxSizing: 'border-box',
       width: '50%',
+      fontSize: 14,
       backgroundColor: '#DB87D5',
       '&:hover': {
         backgroundColor: '#c46abc'

@@ -8,8 +8,11 @@ import Toolbar, { styles as toolbarStyles } from '../components/Toolbar'
 
 const styles = (theme) => ({
   title: {
-    fontSize: 28,
-    fontFamily: 'shrikhand'
+    fontSize: 36,
+    fontFamily: 'shrikhand',
+    [theme.breakpoints.down('xs')]: {
+      fontSize: 18
+    }
   },
   placeholder: toolbarStyles(theme).root,
   toolbar: {
@@ -38,10 +41,18 @@ const styles = (theme) => ({
   },
   backgroundColor: {
     backgroundColor: '#7EBEC0',
-    padding: '6px'
+    padding: '6px',
+    fontSize: 24,
+    [theme.breakpoints.down('xs')]: {
+      fontSize: 14
+    }
   },
   buttonLogin: {
-    marginTop: '6px'
+    marginTop: '6px',
+    fontSize: 24,
+    [theme.breakpoints.down('xs')]: {
+      fontSize: 14
+    }
 
   },
   fontShrikhand: {
