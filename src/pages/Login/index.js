@@ -49,8 +49,8 @@ export default function SignIn () {
       <CssBaseline />
       <div className={classes.paper}>
         <Avatar className={classes.avatar} />
-        <Typography component='h1' className={clsx(classes.fontShrikhand, classes.title)}>
-          Entrar
+        <Typography component='h1' className={clsx(classes.fontNunito, classes.title)}>
+          Login
         </Typography>
         <form className={classes.form} onSubmit={handleLogin}>
           <TextField

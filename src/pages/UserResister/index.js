@@ -9,35 +9,8 @@ import Container from '@material-ui/core/Container'
 import Grid from '@material-ui/core/Grid'
 import axios from 'axios'
 import { useHistory } from 'react-router-dom'
-
-const useStyles = makeStyles((theme) => ({
-  paper: {
-    marginTop: theme.spacing(8),
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center'
-  },
-  avatar: {
-    margin: theme.spacing(1),
-    backgroundColor: '#E3A43D'
-  },
-  form: {
-    width: '100%', // Fix IE 11 issue.
-    marginTop: theme.spacing(3)
-  },
-  submit: {
-
-    backgroundColor: '#DB87D5',
-    margin: theme.spacing(3, 0, 2),
-    color: '#fff',
-    fontFamily: 'Nunito',
-    fontSize: '18px',
-    '&:hover': {
-      backgroundColor: '#c46abc'
-
-    }
-  }
-}))
+import useStyles from './css.js'
+import clsx from 'clsx'
 
 export default function SignUp () {
   const classes = useStyles()
@@ -76,7 +49,7 @@ export default function SignUp () {
       <CssBaseline />
       <div className={classes.paper}>
         <Avatar className={classes.avatar} />
-        <Typography component='h1' variant='h5'>
+        <Typography component='h1' className={clsx(classes.fontNunito, classes.title)}>
           Inscrever-se
         </Typography>
         <form className={classes.form} onSubmit={handleCreateCompanyAccount}>
@@ -159,8 +132,6 @@ export default function SignUp () {
           <Button
             type='submit'
             fullWidth
-            variant='contained'
-            color='primary'
             className={classes.submit}
           >
             Enviar
